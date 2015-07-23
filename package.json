@@ -1,0 +1,26 @@
+{
+  "name": "electronTest",
+  "version": "0.1.0",
+  "main": "./lib/main.js",
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/bombadillo/electrontest.git"
+  },
+  "devDependencies": {
+    "coffee-script": "1.9.0",
+    "jasmine": "",
+    "jitter": "",
+    "less": "",
+    "electron-packager": ""
+  },
+  "scripts": {
+    "preinstall": "",
+    "postinstall": "",
+    "test": "jasmine",
+    "hotcoffee": "jitter src/ lib/",
+    "hottests": "jitter spec/ spec/",
+    "hotcss": "lessc src/less/main.less lib/css/main.css",
+    "build": "electron-packager ./ electronTest --platform=win32 --arch=all --version=0.30.0",
+    "dev": ""
+  }
+}

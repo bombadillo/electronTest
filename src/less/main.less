@@ -1,0 +1,36 @@
+.main-gradient {
+  background: #414465;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#414465), color-stop(100%,#4c4356));
+  background: -webkit-linear-gradient(top,  #414465 0%,#4c4356 100%);
+  background: linear-gradient(to bottom,  #414465 0%,#4c4356 100%);
+}
+
+@main-colour: #fff;
+@on-white-colour: #666;
+
+html{
+  -webkit-user-select: none;
+  width: 100%;
+  height: 100%;
+  .main-gradient;
+  color: @main-colour;
+}
+
+#title-bar {
+  background-color: rgba(0,0,0,0.4);
+  -webkit-app-region: drag;
+  height: 30px;
+  width: 100%;
+
+  .row {
+    margin: 0;
+  }
+}
+
+#result{
+  visibility: hidden;
+
+  li{
+    color: @on-white-colour;
+  }
+}
