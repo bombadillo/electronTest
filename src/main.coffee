@@ -16,5 +16,7 @@ app.on 'ready', ->
   mainWindow = new BrowserWindow windowOptions
   mainWindow.loadUrl "file://#{__dirname}/index.html"
 
+  mainWindow.openDevTools()
+
   mainWindow.on 'closed', ->
     mainWindow = null

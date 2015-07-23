@@ -10,21 +10,10 @@ class App
     @setupListeners()
 
   setupListeners: ->
-    @elGoButton.onclick = @getFileListing
+    @elGoButton.onclick = @getScreenSize
 
-  getFileListing: ->
-    elGoButton = document.getElementById 'go'
-    elResult = document.getElementById 'result'
-    elGoButton.style.visibility = "hidden"
-    elResult.style.visibility = "visible"
-
-    fs.readdir './', (err, files) ->
-      if !err
-        elResult = document.getElementById 'result'
-        for file in files
-          elResult.innerHTML += "<li class=\"collection-item\">#{file}</li>"
-      else
-        throw err
+  getScreenSize: ->
+    console.log fs
 
 app = new App()
 app.start()
